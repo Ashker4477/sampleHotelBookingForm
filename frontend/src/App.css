@@ -1,0 +1,31 @@
+.form {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.form label {
+    margin: 1rem 0;
+}
+
+input,
+select,
+textarea,
+button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #a4a4a4;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type='radio'] {
+    width: 16px;
+}
+
+button.small {
+    width: 200px;
+}
