@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { bookHotel } from './HotelFormSplice';
+import { toast } from 'react-toastify';
 
 export default function HotelForm() {
     const dispatch = useDispatch();
@@ -15,7 +16,6 @@ export default function HotelForm() {
 
     const onSubmit = (data) => {
         if (!data) return;
-        console.log(data);
         dispatch(bookHotel(data));
     };
 
