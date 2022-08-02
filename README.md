@@ -6,7 +6,9 @@ Go inside the sampleHotelBookingForm
 Open the command prompt here.
 
 1. type npm run install
-2. type npm run watch
+2. type npm run deploy
+
+On the browser go on to http://localhost:8000
 
 OR
 
