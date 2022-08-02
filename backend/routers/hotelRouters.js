@@ -5,7 +5,7 @@ const hotel = require('../models/hotelModels');
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hotelBookDB');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hotelBookDB', () => console.log(`DB Conected`));
 
 const hotelRouter = express.Router();
 
