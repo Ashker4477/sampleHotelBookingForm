@@ -28,11 +28,11 @@ export const hotelSlice = createSlice({
 
 export const { start, success, fail } = hotelSlice.actions;
 
-export const bookHotel = (data) => async (dispatch, getState) => {
+export const bookHotel = (formData) => async (dispatch, getState) => {
     dispatch(start());
     try {
-        const hotelBook = await axios.post('http://localhost:8000/hotel/details', data);
-        dispatch(success(hotelBook));
+        const { data } = await axios.post('http://localhost:8000/hotel/details', formData);
+        dispatch(success(data));
     } catch (err) {
         console.log(err);
         dispatch(fail(getError(err)));
