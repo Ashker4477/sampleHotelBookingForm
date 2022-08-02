@@ -4,14 +4,15 @@
     "description": "1. Go inside the frontend folder and backend folder using command prompt. 2. type npm install 3. type npm start",
     "main": "index.js",
     "scripts": {
-        "install-server": "npm install --prefix backend",
-        "install-client": "npm install --prefix frontend",
-        "install": "npm run install-server && npm run install-client",
-        "server": "npm run start --prefix backend",
-        "client": "npm start --prefix frontend",
-        "watch": "npm run server & npm run frontend",
-        "deploy": "npm run build --prefix frontend && npm start --prefix backend",
-        "deploy-cluster": "npm run build --prefix frontend && npm run cluster --prefix backend"
+        "install-server": "cd backend && npm install",
+        "install-client": "cd frontend && npm install",
+        "install": "npm run install-server & npm run install-client",
+        "server": "cd backend && npm run start",
+        "client": "cd frontend && npm start",
+        "build": "cd frontend && npm run build",
+        "watch": "npm run server & npm run client",
+        "deploy": "npm run build && npm run server",
+        "deploy-cluster": "cd frontend && npm run build && cd backend  && npm run cluster"
     },
     "repository": {
         "type": "git",
